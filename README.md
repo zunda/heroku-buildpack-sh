@@ -28,11 +28,11 @@ https://github.com/heroku/heroku-buildpack-apt.git
 https://github.com/zunda/heroku-buildpack-sh.git
 https://github.com/heroku/heroku-buildpack-ruby.git
 $ ls -l .buildpack-sh/printenv
--rwxrwxr-x 1 zunda zunda 20 May 22 19:58 .buildpack-sh/printenv
-$ cat .buildpack-sh/printenv
+-rwxrwxr-x 1 zunda zunda 48 May 22 19:58 .buildpack-sh/source_version
+$ cat .buildpack-sh/source_version
 #!/bin/sh
 
-printenv
+echo SOURCE_VERSION: $SOURCE_VERSION
 ```
 
 ## License
