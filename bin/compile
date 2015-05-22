@@ -1,3 +1,9 @@
 #!/bin/sh
+# bin/compile <build-dir> <cache-dir>
 
-run-parts -v $BUILD_DIR/.buildpack-sh
+echo "       BUILD_DIR:" $1
+echo "       CACHE_DIR:" $2
+echo
+run-parts -v $1/.buildpack-sh
+echo
+exit 0
