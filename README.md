@@ -16,6 +16,7 @@ into the file `.buildpacks` anywhere you want to run the scripts.
 
 Place shell scripts to be run during deploy into the directory `./.buildpack-sh`
 and add execute flag: `chmod +x` to them.
+This buildpack runs `run-parts -v .buildpack-sh` to detect and execute them.
 
 ## License
 [MIT](LICENSE)
