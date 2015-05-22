@@ -1,0 +1,3 @@
+#!/bin/sh
+
+run-parts -v $BUILD_DIR/.buildpack-sh
