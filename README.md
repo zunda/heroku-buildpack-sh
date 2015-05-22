@@ -18,5 +18,22 @@ Place shell scripts to be run during deploy into the directory `./.buildpack-sh`
 and add execute flag: `chmod +x` to them.
 This buildpack runs `run-parts -v .buildpack-sh` to detect and execute them.
 
+### Example
+```
+$ heroku buildpacks
+=== <app-name> Buildpack URL
+https://github.com/heroku/heroku-buildpack-multi.git
+$ cat .buildpacks
+https://github.com/heroku/heroku-buildpack-apt.git
+https://github.com/zunda/heroku-buildpack-sh.git
+https://github.com/heroku/heroku-buildpack-ruby.git
+$ ls -l .buildpack-sh/printenv
+-rwxrwxr-x 1 zunda zunda 20 May 22 19:58 .buildpack-sh/printenv
+$ cat .buildpack-sh/printenv
+#!/bin/sh
+
+printenv
+```
+
 ## License
 [MIT](LICENSE)
