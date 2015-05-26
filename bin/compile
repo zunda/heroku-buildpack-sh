@@ -1,8 +1,12 @@
 #!/bin/sh
-# bin/compile <build-dir> <cache-dir>
+# bin/compile <build-dir> <cache-dir> <env_dir>
 
 echo "       BUILD_DIR:" $1
 echo "       CACHE_DIR:" $2
+echo "       ENV_DIR:  " $3
+for f in $(find $3 -type f); do
+	echo "$(basename $f)=$(cat $f)"
+done
 echo
 run-parts -v $1/.buildpack-sh
 echo
