@@ -27,7 +27,7 @@ $ cat .buildpacks
 https://github.com/heroku/heroku-buildpack-apt.git
 https://github.com/zunda/heroku-buildpack-sh.git
 https://github.com/heroku/heroku-buildpack-ruby.git
-$ ls -l .buildpack-sh/printenv
+$ ls -l .buildpack-sh/source_version
 -rwxrwxr-x 1 zunda zunda 48 May 22 19:58 .buildpack-sh/source_version
 $ cat .buildpack-sh/source_version
 #!/bin/sh
