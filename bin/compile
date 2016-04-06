@@ -1,9 +1,12 @@
 #!/bin/sh
 # bin/compile <build-dir> <cache-dir> <env_dir>
 
-echo "       BUILD_DIR:" $1
-echo "       CACHE_DIR:" $2
-echo "       ENV_DIR:  " $3
+export BUILD_DIR="$1"
+export CACHE_DIR="$2"
+export ENV_DIR="$3"
+echo "       BUILD_DIR: $BUILD_DIR"
+echo "       CACHE_DIR: $CACHE_DIR"
+echo "       ENV_DIR:   $ENV_DIR"
 echo "       Config-vars:"
 for f in $(find $3 -type f); do
 	echo "       $(basename $f)=$(cat $f)"
