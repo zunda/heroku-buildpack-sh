@@ -12,6 +12,8 @@ for f in $(find $3 -type f); do
 	echo "         $(basename $f)"
 done
 echo
-run-parts -v $1/.buildpack-sh
-echo
+if [ -d $1/.buildpack-sh ]; then
+  run-parts -v $1/.buildpack-sh
+  echo
+fi
 exit 0
