@@ -9,7 +9,7 @@ echo "       CACHE_DIR: $CACHE_DIR"
 echo "       ENV_DIR:   $ENV_DIR"
 echo "       Config-vars:"
 for f in $(find $3 -type f); do
-	echo "       $(basename $f)=$(cat $f)"
+	echo "         $(basename $f)"
 done
 echo
 run-parts -v $1/.buildpack-sh
