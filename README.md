@@ -26,7 +26,7 @@ This buildpack runs `run-parts -v .buildpack-sh` to detect and execute them.
 $ heroku buildpacks:set heroku/ruby
 $ heroku buildpacks:add --index 1 https://github.com/zunda/heroku-buildpack-sh.git
 $ heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-apt.git
-Buildpack added. Next release on daigo-pi will use:
+Buildpack added. Next release on this-app will use:
   1. https://github.com/heroku/heroku-buildpack-apt.git
   2. https://github.com/zunda/heroku-buildpack-sh.git
   3. heroku/ruby
