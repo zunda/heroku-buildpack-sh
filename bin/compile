@@ -12,10 +12,12 @@ for f in $(find $3 -type f); do
 	echo "         $(basename $f)"
 done
 echo
-if [ -d $1/.buildpack-sh ]; then
-	run-parts -v $1/.buildpack-sh
+if [ -d $BUILD_DIR/.buildpack-sh ]; then
+	run-parts -v $BUILD_DIR/.buildpack-sh
 else
-	echo "         .buildpack-sh directory doesn't exist."
+	echo "         .buildpack-sh directory doesn't exist:"
+	ls -a $BUILD_DIR
+else
 fi
 echo
 exit 0
