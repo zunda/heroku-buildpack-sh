@@ -15,5 +15,7 @@ echo
 if [ -d $1/.buildpack-sh ]; then
   run-parts -v $1/.buildpack-sh
   echo
+else
+	echo ".buildpack-sh directory doesn't exist."
 fi
 exit 0
